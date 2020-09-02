@@ -1,0 +1,241 @@
+.bg-home{
+        background-image: url(../img/intro-bg.png);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 600px;
+        background-repeat: no-repeat;
+        background-size: 100% 621px;
+        
+    
+
+        .img-home{
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            margin-top: 63px;
+    
+                img{
+                    max-width: 100%;
+                    
+                }
+           
+           }
+
+        div{
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+    
+            p{
+                font-family: $montserrat-font;
+                font-size: 48px;
+                font-weight: 800;
+                color: #ffffff;
+                width: 450px;
+                z-index: 100;
+                padding-left: 28px;
+    
+                .underline{
+                    text-decoration: underline;
+                    color: $color-74b5fc;
+                    display: block;
+                }
+    
+            }
+    
+            .button-home{
+
+                width: 380px;
+                height: auto;
+                margin-left: 30px;
+                display:flex;
+                flex-direction: row;
+                justify-content: space-between;
+                
+                .button-home-1{
+                    color: #ffffff;
+                    background: $color-007bff;
+                    border: 1px solid $color-007bff;
+                    border-radius: 20px;
+                    width: 180px;
+                    height: 43px;
+                    font-family: $montserrat-font;
+                    font-size: 15px;
+                    font-weight: 900;
+                    text-align: center;
+    
+                    a{
+                        text-decoration: none;
+                        color: $color-ffffff;
+    
+                    }
+    
+                    &:hover{
+                        border: 2px solid $color-ffffff;
+                        background: $color-1445b3;
+                        transition: 0.5s all ease-in-out;
+
+                }
+                }
+    
+                .button-home-2{
+                    border-radius: 20px;
+                    width: 180px;
+                    height: 43px;
+                    font-family: $montserrat-font;
+                    font-size: 15px;
+                    font-weight: 900;
+                    text-align: center;
+                    background: $color-1445b3;
+                    color: $color-ffffff;
+                    border: 2px solid $color-ffffff;
+    
+                    a{
+                        text-decoration: none;
+                        color: $color-ffffff;
+            
+                    }
+    
+                    &:hover{
+                        background: $color-007bff;
+                        color: #ffffff;
+                        border: 0px;
+                        transition: 0.5s all ease-in-out;
+
+    
+                     }
+                }
+            }    
+        }
+    
+        }
+    
+
+
+
+    
+@include desktop {
+
+     .bg-home {
+
+        padding: 10px 5%;
+
+
+            }
+
+    
+        
+    
+}
+    
+@include tablet {
+        
+        .bg-home {
+
+            display: flex;
+            flex-direction: column-reverse;
+            background-size: 100% 697px;
+            background-repeat: no-repeat;
+            transform: translateY(61px);
+            padding: 41px 0 73px 0;
+
+                div {
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: 0;
+                      
+                        p {
+
+                            text-align: center;
+                            margin-top: 0px;
+                            padding-left: 0px;
+
+                            }
+                    }
+
+                    .img-home {
+                        display: flex;
+                        align-items: center;
+                        height: auto;
+                        
+                            img{
+                                width: 450px;
+                                height: auto;
+                            }
+                        }
+
+                        .button-home{
+                        margin-left: 0px;
+
+                        }
+
+
+                    }
+            
+        } 
+    
+
+@include phone{
+            
+    .bg-home {
+        display: flex;
+        flex-direction: column-reverse;
+        transform: translateY(61px);
+        padding: 41px 0 73px 0;
+        height: 547px;
+        width: 100%;
+    
+            div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 0;
+                margin-bottom: 23px;
+
+                    p {
+                        text-align: center;
+                        font-size: 36px;
+                        padding-bottom: -6px;
+                        justify-content: center;
+                        margin-left: 0;
+
+                        }
+                                
+                        .button-home {
+                            display: flex;
+                            flex-direction: column;
+                            margin-top: 5px;
+                            margin-left: 0px;
+                                    
+                                button {
+                                    margin: 5px;
+
+                                        } 
+    
+                                        .button-home-2{
+                                            margin-right: 0px;
+                                        }
+                                }
+                        }
+
+                        .img-home {
+                            display: flex;
+                            align-items: center; 
+                            margin-top: 120px;
+                            margin-right: 0;
+                            height: auto;
+    
+                                img{
+                                    width: 400px;
+                                    height: auto;
+                            }
+                        }    
+                }
+            
+        } 
+        

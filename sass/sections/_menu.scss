@@ -1,0 +1,327 @@
+header {
+    position: fixed;
+    box-shadow: $desktop-box-shadow;
+    background-color: $color-ffffff;
+    top:0;
+    height: 80px;
+    width: 100%;
+    z-index: 1000;
+
+        nav {
+            display: flex;
+            align-content: center;
+            justify-content: space-between;
+            padding: 20px 7%;
+                img {
+
+                    height: 27px;
+
+                    }
+
+                    .menu-icon {
+
+                                display: none;
+
+                             a {
+                                color: $color-0047a2;
+                                 font-size: 27px;
+
+                                }
+                    
+                        }
+
+                .menu-mobile {
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                    height: 200%;
+                    width: 100%;
+                    visibility: hidden;
+                    background-color: $menu-mobile-bg-color-1;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                   
+                    
+                    
+                        .mobile {
+                            background-color: $menu-mobile-bg-color-2;
+                            padding-left: 0;
+                            margin: 0;
+                            list-style: none;
+                            overflow: auto;
+                            height: 100%;
+                            width: 280px;
+                            position: fixed;
+                            top: 0;
+                            left: -260px;
+                            transition: left 0.6s ease;
+                            
+                
+                                li {
+                                    margin:6%;
+                                    margin-left: 26px;
+                                    padding: 2px;
+                                    
+                                        a {
+                                            color: $color-ffffff;
+                                            font-family: $open-font;
+                                            font-weight: 500;
+                                            text-decoration: none;
+                                        }
+
+                                        a:hover {
+                                            color: $color-74b5fc;
+                                            transition: 0.5s all ease-in-out;
+                                        }
+                                }
+
+                                .deepdropdownmobile{
+                                    list-style: none;
+                                    padding-left: 0;
+                                    padding-bottom: 0;
+                                    max-height: 0;
+                                    overflow: hidden;
+                                    transition: max-height 0.6s ease;
+                                    z-index: 9;
+                                    margin-bottom: -5px;
+
+                                    li{
+                                        padding-right: 0;
+    
+                                    }
+                                  
+                                }
+
+                                .dropdownmobile{
+                                    list-style: none;
+                                    padding-left: 0;
+                                    max-height: 0;
+                                    overflow: hidden;
+                                    transition: max-height 0.6s ease;
+                                    z-index: 9;
+                                    position: relative;
+                                    bottom: -9px;
+                                
+                                }
+                                
+                                #deepdropdown-mobile{
+                                    position: absolute;
+                                    right: 17px;
+                                    bottom:279px;
+                                    display: none;
+                                }
+
+                                #dropdown-mobile{
+                                    position:absolute;
+                                    right: 200px;
+                                    display: none;
+                                    
+                                }
+
+                                #deepdropdown-mobile:checked + .label-deep>.deepdropdownmobile{
+                                    max-height: 244px;
+                                    transition: max-height 0.6s ease;
+
+                                }
+
+                                #dropdown-mobile:checked + .label-drop>.dropdownmobile{
+                                    max-height: 429px;
+                                    transition: max-height 0.6s ease;
+
+                                }
+
+                                .icon-deep {
+                                    position: relative;
+                                    left: 77px;
+                                    font-size: 17px;
+                                    color: $color-ffffff;
+                                    bottom: 1px;
+                                    font-weight: 700;
+
+
+                                    &:hover{
+                                        color: $color-74b5fc;
+                                    }
+                                }
+
+                                .icon-drop{
+                                    position: relative;
+                                    color: $color-ffffff;
+                                    font-size: 17px;
+                                    font-weight: 700;
+                                    left: 119px;
+
+                                    &:hover{
+                                        color: $color-74b5fc;
+                                    }
+                                }
+                     
+                        }
+
+                       .close {
+                            position: absolute;
+                            top: 19px;
+                            right: 7%;
+
+                                a {
+                                    color: $color-ffffff;
+                                    font-size: 30px;
+                                }
+                        }    
+                                               
+                }
+                #menu-mobile:target {
+                    visibility: visible;
+                    opacity: 1;
+                    transition: left 0.6s ease;
+                
+                } 
+                #menu-mobile:target .mobile {
+                    left: 0; 
+                    transition: left 0.6s ease;                   
+                }
+                #menu-mobile:target .close {
+                    display: block;
+                    
+                } 
+
+
+                .menu {
+
+                    font-size: 14px;
+                    font-weight: 500;
+                    width: 630px;
+                    font-family: $montserrat-font;
+                   
+                        ul {
+                            display: flex;
+                            justify-content: space-between;
+                            padding: 0;
+                            list-style: none;
+                            
+                                 a {
+                                    color: $color-0047a2;
+                                    text-decoration: none;
+                                        
+                                    &:hover {
+
+                                        color: $color-477bff;
+
+                                             }
+                                    }                                                  
+                            }
+
+                        .dropdown{
+
+                            display:inline-block;
+                            position: relative;
+    
+                            ul{
+
+                                display:none;
+                                background-color: $color-ffffff;
+                                font-size: 13px;
+                                width: 150px;
+                                height: 195px;
+                                line-height: 40px;
+                                box-shadow: $desktop-box-shadow;
+                                padding-top: 10px;
+                                padding-bottom:10px;
+                                position: relative;
+                                left: -15px;
+
+                                .fa{
+
+                                    right: -30px;
+                                    position: absolute;
+                                    top: 14px;
+                                }
+                                
+                                a{
+                                    margin-left: 20px;
+                                    
+                                }
+                            }
+    
+                            &:hover {
+                                cursor: pointer;
+                                transition: 0.3s all ease-in;
+    
+    
+                                ul{
+                                    display: block;
+                                    position: absolute;
+                                   
+                                }
+                            }
+
+                            .deepdropdown{
+
+                                display:inline-block;
+                                position: relative;
+
+                                ul{
+                                    display:none;
+                                    background-color: $color-ffffff;
+                                    font-size: 13px;
+                                    width: 170px;
+                                    height: 195px;
+                                    line-height: 40px;
+                                    left: 120px;
+                                    right: 30px;
+                                    box-shadow: $desktop-box-shadow;                                   
+                                    top: 10px;
+                                    position: relative;
+                                }
+
+                                &:hover {
+                                    cursor: pointer;
+        
+        
+                                    ul{
+                                        display: block;
+                                        position: absolute;
+                                    }
+                                }
+
+                            }
+
+                        }
+
+                }
+          
+       }
+      
+}
+
+
+@media (min-width: 993px) {
+    .menu-mobile {
+        display: none;
+    }
+} 
+
+@media (max-width: 992px) {
+
+    nav {
+         padding: 20px 10%;
+
+         .nav-bar {
+
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            .menu-icon {
+            display: flex;
+            
+                    }
+            }
+                .menu {
+                    display: none;    
+                }    
+        }
+    
+}
+

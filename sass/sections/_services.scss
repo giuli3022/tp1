@@ -1,0 +1,139 @@
+#services{
+
+    background-color: $color-ecf5ff;
+    padding-top: 30px;
+    padding-bottom: 70px;
+    font-family: $open-font;
+    padding: 20px 7%;
+    box-shadow: $desktop-box-shadow;
+
+    
+    .subtit{
+        width: 45%;
+        height: 60px;
+        margin: auto;
+        font-size: 15px;
+        font-weight: 400;
+        color: #556877;
+        line-height: 22px; 
+        margin-top: -10px;
+        text-align: center;
+        letter-spacing: 0.1px;
+        padding-bottom: 40px;
+    }
+
+
+    .cards{
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 88%;
+        align-content: center;
+        margin-bottom: 35px;
+        margin-left:auto;
+        margin-right:auto;
+
+
+        .card{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            background-color: $color-ffffff;
+            margin: 20px;
+            padding: 20px;
+            position:relative;
+            overflow: hidden;
+        
+    
+            .card-icon{
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                position: absolute;
+                left:-10px; 
+                
+                
+                img{
+                    width: 56px;
+                    height: auto; 
+                
+                }
+             }
+    
+             
+             .tit-card{
+                
+                font-family: $montserrat-font;
+                font-weight: 800;
+                font-size: 18px;
+                color: $color-000000;
+                text-decoration: none;
+                margin-left: 75px;
+    
+                &:hover{
+                    color: $color-007bff;
+                    transition: all 0.3s;
+                }
+    
+            }
+    
+            .card-text{
+                
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 22px;
+                color: $color-444444;
+                margin-left: 75px;
+                margin-top: -10px;
+            }
+    
+            &:hover{
+                transform: translateY(-7px);
+                transition: all 0.3s ease-in-out;
+            }
+            
+            
+        }
+
+       
+
+    }
+
+
+    
+
+@include tablet{
+
+        .subtit{
+            width: 60%;
+        }
+        padding: 20px 5%;
+
+    }
+
+@include phone{
+
+        .subtit{
+            width: 90%;
+        }
+
+        padding: 20px 10%;
+
+        .cards{
+            
+            .card{
+                width: 100%;
+            }
+        }
+
+        
+
+    }
+
+   
+}

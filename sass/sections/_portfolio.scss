@@ -1,0 +1,152 @@
+#portfolio{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    padding: 20px 10%;
+
+}
+
+.portfolio-filter{
+    background-color: $color-ecf5ff;
+    width:65px;
+    border-radius:20px;
+    text-align:center;
+    height:33px;
+    line-height:33px;
+    transition: background-color 0.5s ease;
+    &:hover{
+        background-color: $color-017bfe;
+        transition: background-color 0.5s ease;
+    }
+
+
+}
+#portfolio-menu{
+    display:flex;
+    justify-content:space-evenly;
+    width:80%;
+    @include tablet{
+        width: 50%;
+    }
+    @include desktop{
+        width:30%;
+    }
+}
+
+.portfolio-menu-anchor{
+    text-decoration:none;
+    font-family: $open-font;
+    color: $color-017bfe;
+    font-weight:100;
+    font-size:12px;
+    &:hover{
+        color: $color-ffffff;
+    }
+}
+
+.portfolio-img{
+    box-sizing:border-box;
+    height:250px;
+    overflow: hidden; 
+    margin: 10px;
+    position:relative;
+        .img{
+            overflow:hidden;
+            height:100%;
+            width:100%;
+            border-radius: 8px;
+            display:flex;
+            align-items:center;
+            justify-content: center;
+             img{
+                 height:100%;
+                 width:100%;
+                object-fit: cover;
+            }
+        }
+    @include tablet{
+        max-width:50%;
+    }
+    @include desktop{
+        max-width:30%;
+    }
+}
+
+.portfolio-info{
+    position: absolute;
+    opacity:0;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    height:100%;
+    width:100%;
+    background-color:rgba(0,49,102,.5);
+    border-radius:8px;
+    h4{
+        margin:0;
+    }
+    p{
+        text-align:center;
+        color: $color-ffffff;
+        font-family:$open-font;
+    }
+    div{
+        display:flex;
+        justify-content: space-between;
+        width:20%;
+        span{
+            width:30px;
+            height:30px;
+            border-radius:50%;
+            background-color: $color-017bfe;
+            text-align:center;
+            cursor:pointer;
+            &:hover{
+                background-color:lighten($color-017bfe, 10%);
+                transition: background-color 0.5s ease;
+            }
+            }
+        .fas{
+            &:before{
+                font-size: 17px;
+                color: $color-ffffff;
+                line-height:30px;
+                text-align:center;
+            }
+        }
+    }
+    &:hover{
+        opacity:1;
+        transition: opacity 0.5s ease;
+    }
+}
+
+.port-name{
+        color:#fff;
+        font-family: $montserrat-font;
+        font-size:25px;
+        text-decoration: none;
+        transition: color 0.5s ease-in-out;
+        &:hover{
+            color: $color-017bfe;
+            transition: color 0.5s ease-in-out;
+        }
+}
+
+#portfolio-wrap{
+    display:flex;
+    flex-direction: column;
+    box-sizing:border-box;
+        @include tablet{
+            flex-wrap: wrap;
+            margin:15px;
+            height:1400px;
+        } 
+        @include desktop{
+            flex-flow:row wrap;
+            justify-content:center;
+            margin:30px;
+            height:1000px;
+        }
+}
